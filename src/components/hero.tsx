@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import { Button } from "./ui/button";
 import { FolderGit2, SquareArrowOutUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = (): JSX.Element => {
   return (
@@ -16,11 +17,11 @@ const Hero = (): JSX.Element => {
         </p>
 
         <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-          <a href="/projects/">
+          <Link to="/projects/">
             <Button className="sm:p-5 sm:text-lg">
               <FolderGit2 /> See My Projects
             </Button>
-          </a>
+          </Link>
           <a href="https://github.com/loselen" target="_blank">
             <Button variant="outline" className="sm:p-5 sm:text-lg">
               <SquareArrowOutUpRight /> GitHub Profile

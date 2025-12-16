@@ -17,6 +17,7 @@ import { AspectRatio } from "./ui/aspect-ratio";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import projects from "../data/projects.json";
+import { Link } from "react-router-dom";
 
 const ProjectList = (): JSX.Element => {
   return (
@@ -27,11 +28,11 @@ const ProjectList = (): JSX.Element => {
             Project{" "}
             <span className="font-kaushan font-normal text-primary">List</span>
           </h1>
-          <a href="/">
+          <Link to="/">
             <Button variant="outline" size="lg">
               <ArrowLeft /> Back
             </Button>
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {projects.map((project, index) => (
